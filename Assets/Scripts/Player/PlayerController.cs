@@ -6,19 +6,18 @@ namespace Player.Movement
 
     public class PlayerController : MonoBehaviour
     {
-        private float GroundDistance = .2f;
-
-        [SerializeField] private float speed, jumpForce;
+        [SerializeField] private float groundDistance = .1f;
+        [SerializeField] private float moveSpeed, jumpForce;
         [SerializeField] private LayerMask whatisGround;
-        [SerializeField] Transform firePoint;
-        [SerializeField] GameObject bulletPrefab;
-        [SerializeField] private Transform groundPoint;
+        [SerializeField] private Transform groundPointLeft, groundPointRight;
+        [SerializeField] private float hangTime = .2f;
+        [SerializeField] private float jumpBufferLength = .1f;
 
         private Rigidbody2D rigidbody;
         private Collider2D collider;
         private Animator animator;
         private bool isGrounded;
-        private float inputX, inputY;
+        private float inputX, inputY, hangCounter, jumpBufferCount;
 
         private void Awake() 
         {
@@ -29,24 +28,52 @@ namespace Player.Movement
 
         private void Update() 
         {
-            rigidbody.velocity = new Vector2(inputX * speed, rigidbody.velocity.y);
+            rigidbody.velocity = new Vector2(inputX * moveSpeed, rigidbody.velocity.y); // Moving the player side to side with a given force 
 
             //Check if on the ground
-            isGrounded = Physics2D.OverlapCircle(groundPoint.position, GroundDistance, whatisGround);
+            isGrounded = Physics2D.OverlapCircle(groundPointLeft.position, groundDistance, whatisGround) || Physics2D.OverlapCircle(groundPointRight.position, groundDistance, whatisGround);
 
-            if(rigidbody.velocity.x > 0f)
+            // Setting the hangtime and counter so if the player wants to jump last second at the edge of the platform they can
+            if(isGrounded)
+            {
+                hangCounter = hangTime;
+            }else
+            {
+                hangCounter -= Time.deltaTime;
+            }
+
+            if(inputY > 0f)
+            {
+                jumpBufferCount = jumpBufferLength;
+            }else
+            {
+                jumpBufferCount -= Time.deltaTime;
+            }
+
+            // Rotating the player so hes always looking the right way 
+            if(rigidbody.velocity.x < 0f)
             {
                 transform.localScale = Vector3.one;
-            }else if(rigidbody.velocity.x < 0f)
+            }else if(rigidbody.velocity.x > 0f)
             {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
+
+
             animator.SetFloat("speed", Mathf.Abs(rigidbody.velocity.x));
             animator.SetBool("isGrounded", isGrounded);
 
-             if(isGrounded && inputY > 0)
+            // For the jumping 
+            if(hangCounter > 0f && jumpBufferCount >= 0)
             {
                 rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+                jumpBufferCount = 0;
+            }
+
+            // Short jumps if the player does not hold the jump button (Mapped to W for now)
+            if(Keyboard.current.wKey.wasReleasedThisFrame && rigidbody.velocity.y > 0f)
+            {
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y * .5f);
             }
         }
 
@@ -56,6 +83,7 @@ namespace Player.Movement
         {
             inputX = context.ReadValue<Vector2>().x;
             inputY = context.ReadValue<Vector2>().y;
+
         }
 
     }
