@@ -6,18 +6,27 @@ using UnityEngine.EventSystems;
 
 public class ItemBuilder : MonoBehaviour
 {
-    [SerializeField] PlatformType selectedPlatformType;
+    [SerializeField] PlatformType selectedPlatformType = null;
+    //Serialize field for choosing grid size.
+    [SerializeField] private Vector3 gridSize = new Vector3(1f, 1f, 1f);
 
     // Update is called once per frame
     void Update()
     {
-        //If the left mouse button is pressed and the mouse cursor is not on top of a game obect.
-        if (Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject()) {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            //If the current selected platform does not overlap with anything and can be placed.
-            if (canPlaceHere(selectedPlatformType, mousePosition)) {
-                //Place the platform at the mouse position.
-                Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity);
+        if (selectedPlatformType != null) {
+            //If the left mouse button is pressed and the mouse cursor is not on top of a game obect.
+            if (Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject())
+            {
+                Vector3 mousePosition = GetMouseWorldPosition();
+                //Snaps to grid, depends on grid size.
+                mousePosition = snapToGridSquare(mousePosition);
+                //If the current selected platform does not overlap with anything and can be placed.
+                if (canPlaceHere(selectedPlatformType, mousePosition))
+                {
+                    //Place the platform at the mouse position.
+                    Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity);
+                    selectedPlatformType = null;
+                }
             }
         }
     }
@@ -69,5 +78,15 @@ public class ItemBuilder : MonoBehaviour
     {
         Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
         return worldPosition;
+    }
+
+    //A method that sets the mouse position/spawn position to be a integer, so that it snaps to grid.
+    private Vector3 snapToGridSquare(Vector3 mousePosition) {
+        //Creates a new Vector3 that has x, y and z values rounded to a integer
+        Vector3 newPosition = new Vector3(Mathf.RoundToInt(mousePosition.x / this.gridSize.x) * this.gridSize.x,
+            Mathf.RoundToInt(mousePosition.y / this.gridSize.y) * this.gridSize.y,
+            Mathf.RoundToInt(mousePosition.z / this.gridSize.z) * this.gridSize.z);
+
+        return newPosition;
     }
 }

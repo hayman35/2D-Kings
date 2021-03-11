@@ -2196,8 +2196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6936768134f00d14f8519d43969e12fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedPlatformType: {fileID: 11400000, guid: 9a4cb80a17016a3409ea94b1cfe818af,
-    type: 2}
+  selectedPlatformType: {fileID: 0}
+  gridSize: {x: 1, y: 1, z: 1}
 --- !u!4 &1793317474
 Transform:
   m_ObjectHideFlags: 0
@@ -2347,6 +2347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613403470730786705, guid: 043fdd77236e82447a008c28cba07f69,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613403470730786711, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
