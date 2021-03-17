@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f882c634779975e41bdccc6a5e582aa6, type: 3}
   m_Name: SpikyPlatformSmall
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 6588198385779562618, guid: 5ceea2b547ed25b4fbdffa88d06d052a,
+  platformPrefab: {fileID: 3536374242819168396, guid: 5ceea2b547ed25b4fbdffa88d06d052a,
+    type: 3}
+  GUIGhost: {fileID: 3536374242819168396, guid: 5ceea2b547ed25b4fbdffa88d06d052a,
     type: 3}

@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 public class ItemBuilder : MonoBehaviour
 {
     [SerializeField] PlatformType selectedPlatformType = null;
-    //Serialize field for choosing grid size.
-    [SerializeField] private Vector3 gridSize = new Vector3(1f, 1f, 1f);
+    //Serialize field for choosing grid size. CHANGE numbers here to adjust grid size.
+    public static Vector3 gridSize = new Vector3(1f, 1f, 1f);
 
     // Update is called once per frame
     void Update()
@@ -36,6 +36,18 @@ public class ItemBuilder : MonoBehaviour
      */
     public void setSelectedPlatformType(PlatformType type) {
         selectedPlatformType = type;
+    }
+
+    /**
+     * A method that returns the current selected platform type.
+     */
+    public PlatformType getSelectedPlatformType()
+    {
+        if (selectedPlatformType != null) {
+            return selectedPlatformType;
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -80,12 +92,32 @@ public class ItemBuilder : MonoBehaviour
         return worldPosition;
     }
 
+    // Gets the mouse position and then snap to grid size of 1 at the same time.
+    public static Vector3 GetMouseWorldPositionWithSnap()
+    {
+        Vector3 vec = GetMouseWorldPositionWithZ(Mouse.current.position.ReadValue(), Camera.main);
+        vec = snapToGridSquareGridOne(vec);
+        vec.z = 0f;
+        return vec;
+    }
+
     //A method that sets the mouse position/spawn position to be a integer, so that it snaps to grid.
-    private Vector3 snapToGridSquare(Vector3 mousePosition) {
+    public Vector3 snapToGridSquare(Vector3 mousePosition) {
         //Creates a new Vector3 that has x, y and z values rounded to a integer
-        Vector3 newPosition = new Vector3(Mathf.RoundToInt(mousePosition.x / this.gridSize.x) * this.gridSize.x,
-            Mathf.RoundToInt(mousePosition.y / this.gridSize.y) * this.gridSize.y,
-            Mathf.RoundToInt(mousePosition.z / this.gridSize.z) * this.gridSize.z);
+        Vector3 newPosition = new Vector3(Mathf.RoundToInt(mousePosition.x / gridSize.x) * gridSize.x,
+            Mathf.RoundToInt(mousePosition.y / gridSize.y) * gridSize.y,
+            Mathf.RoundToInt(mousePosition.z / gridSize.z) * gridSize.z);
+
+        return newPosition;
+    }
+
+    //Grid size of 1. Can be adjusted in another class using the static gridSize variable.
+    public static Vector3 snapToGridSquareGridOne(Vector3 mousePosition)
+    {
+        //Creates a new Vector3 that has x, y and z values rounded to a integer
+        Vector3 newPosition = new Vector3(Mathf.RoundToInt(mousePosition.x),
+            Mathf.RoundToInt(mousePosition.y),
+            Mathf.RoundToInt(mousePosition.z));
 
         return newPosition;
     }

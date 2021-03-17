@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2478180598978814426}
   m_Layer: 8
   m_Name: jungle_pack_13
-  m_TagString: Untagged
+  m_TagString: PlatformSpriteLarge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 6480582817837740814}
   - component: {fileID: 881382583406562498}
   - component: {fileID: 796357398177952259}
+  - component: {fileID: 512817251858049793}
   m_Layer: 8
   m_Name: PlatformLarge
   m_TagString: Untagged
@@ -162,6 +163,47 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!23 &512817251858049793
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685114791000081070}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3644444667264733907
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +216,7 @@ GameObject:
   - component: {fileID: 5941645591752511672}
   m_Layer: 8
   m_Name: jungle_pack_15
-  m_TagString: Untagged
+  m_TagString: PlatformSpriteLarge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +298,7 @@ GameObject:
   - component: {fileID: 2034343578745973341}
   m_Layer: 8
   m_Name: jungle_pack_38
-  m_TagString: Untagged
+  m_TagString: PlatformSpriteLarge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 6480582817837740814, guid: 9641ad201036e9846851446182fce0e1,
     type: 3}
+  GUIGhost: {fileID: 6480582817837740814, guid: 9641ad201036e9846851446182fce0e1,
+    type: 3}

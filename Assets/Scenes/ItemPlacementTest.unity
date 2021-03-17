@@ -343,6 +343,8 @@ MonoBehaviour:
   spikyPlatformMedium: {fileID: 11400000, guid: d910d56896c2e514c9ebcefff5f70baf,
     type: 2}
   spikyPlatformSmall: {fileID: 11400000, guid: 2fa7dc95cb16de74ebdb23946f89babb, type: 2}
+  Ghost: {fileID: 0}
+  GhostMaterial: {fileID: 2100000, guid: 776f78afd0920bb429b51baf38096c1b, type: 2}
 --- !u!1 &520237054
 GameObject:
   m_ObjectHideFlags: 0

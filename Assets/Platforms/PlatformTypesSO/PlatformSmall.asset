@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f882c634779975e41bdccc6a5e582aa6, type: 3}
   m_Name: PlatformSmall
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 4283379623802546150, guid: 2b126bef3b0fa324e86c390716325b2e,
+  platformPrefab: {fileID: 1971499398442412773, guid: 2b126bef3b0fa324e86c390716325b2e,
+    type: 3}
+  GUIGhost: {fileID: 1971499398442412773, guid: 2b126bef3b0fa324e86c390716325b2e,
     type: 3}
