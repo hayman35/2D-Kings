@@ -15,7 +15,7 @@ namespace Player.Movement
 
         private Rigidbody2D rigidbody;
         private Collider2D collider;
-        private Animator animator;
+        //private Animator animator;
         private bool isGrounded;
         private float inputX, inputY, hangCounter, jumpBufferCount;
 
@@ -23,7 +23,7 @@ namespace Player.Movement
         {
             rigidbody = GetComponent<Rigidbody2D>();
             collider = GetComponent<Collider2D>();
-            animator = GetComponent<Animator>();
+           // animator = GetComponent<Animator>();
         }
 
         private void Update() 
@@ -60,8 +60,8 @@ namespace Player.Movement
             }
 
 
-            animator.SetFloat("speed", Mathf.Abs(rigidbody.velocity.x));
-            animator.SetBool("isGrounded", isGrounded);
+            //animator.SetFloat("speed", Mathf.Abs(rigidbody.velocity.x));
+            //animator.SetBool("isGrounded", isGrounded);
 
             // For the jumping 
             if(hangCounter > 0f && jumpBufferCount >= 0)
