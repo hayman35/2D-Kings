@@ -19,6 +19,8 @@ namespace Player.Movement
         private bool isGrounded;
         private float inputX, inputY, hangCounter, jumpBufferCount;
 
+        public GameObject player;
+
         private void Awake() 
         {
             rigidbody = GetComponent<Rigidbody2D>();
@@ -84,6 +86,32 @@ namespace Player.Movement
             inputX = context.ReadValue<Vector2>().x;
             inputY = context.ReadValue<Vector2>().y;
 
+        }
+
+        void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("MovingPlatform"))
+            {
+                this.transform.parent = other.transform;
+            }
+            if (other.gameObject.CompareTag("FallingPlatform"))
+            {
+                other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                this.transform.parent = other.transform;
+            }
+            
+        }
+        void OnCollisionExit2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("MovingPlatform"))
+            {
+                this.transform.parent = null;
+            }
+            if (other.gameObject.CompareTag("FallingPlatform"))
+            {
+                //other.gameObject.GetComponent<Rigidbody2D>.isKinematic = true;
+                this.transform.parent = null;
+            }
         }
 
     }
