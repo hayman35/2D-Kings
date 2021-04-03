@@ -3,76 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlatformSelectUI : MonoBehaviour
-{
+public class PlatformSelectUI : MonoBehaviour{
     [SerializeField] private ItemBuilder builder;
-
-    [SerializeField] private PlatformType platformLarge;
-    [SerializeField] private PlatformType platformMedium;
-    [SerializeField] private PlatformType platformSmall;
-    [SerializeField] private PlatformType spikyPlatfromLarge;
-    [SerializeField] private PlatformType spikyPlatformMedium;
-    [SerializeField] private PlatformType spikyPlatformSmall;
+    
 
     //Code for displaying the visual ghost of the platform.
     public Transform Ghost; //The ghost object.
     public Material GhostMaterial; //Material of the ghost sprite, should be transparent.
     public static bool GhostActive = false; //boolean to check if a visual ghost is active.
 
-    void Awake() {
-        //Not sure how to loop this.
-        //Finds all the buttons and assigns them to a variable.
-        Transform PlatformLargeButton = transform.Find("PlatformLargeButton");
-        Transform PlatformMediumButton = transform.Find("PlatformMediumButton");
-        Transform PlatformSmallButton = transform.Find("PlatformSmallButton");
-        Transform SpikyPlatformLargeButton = transform.Find("SpikyPlatformLargeButton");
-        Transform SpikyPlatformMediumButton = transform.Find("SpikyPlatformMediumButton");
-        Transform SpikyPlatformSmallButton = transform.Find("SpikyPlatformSmallButton");
-
-        //Sets what the buttons do when they are clicked on.
-        //When a button is clicked, sets the selected platform to be of the type specified by the button.
-        PlatformLargeButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformLarge);
-            createGhost();
-        });
-
-        PlatformMediumButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformMedium);
-            createGhost();
-        });
-
-        PlatformSmallButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformSmall);
-            createGhost();
-        });
-
-        SpikyPlatformLargeButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatfromLarge);
-            createGhost();
-        });
-
-        SpikyPlatformMediumButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatformMedium);
-            createGhost();
-        });
-
-        SpikyPlatformSmallButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatformSmall);
-            createGhost();
-        });
-
-    }
-
     /**
      * Creates the visual ghost that allows the player to see where the platform will be built.
      */
-    private void createGhost() {
+    public void createGhost(PlatformType type) {
+        builder.setSelectedPlatformType(type);
         //If a ghost object has already spawned, destroy the object.
         if (GhostActive)
         {
