@@ -1945,6 +1945,7 @@ MonoBehaviour:
   groundPointRight: {fileID: 1661494651}
   hangTime: 0.2
   jumpBufferLength: 0.1
+  player: {fileID: 0}
 --- !u!4 &1056691741
 Transform:
   m_ObjectHideFlags: 0
@@ -2803,13 +2804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   builder: {fileID: 4570337931106773379}
-  platformLarge: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
-  platformMedium: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
-  platformSmall: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
-  spikyPlatfromLarge: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
-  spikyPlatformMedium: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4,
-    type: 2}
-  spikyPlatformSmall: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
+  platforms:
+  - {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
+  buttons:
+  - {fileID: 4570337930225528766}
   Ghost: {fileID: 0}
   GhostMaterial: {fileID: 2100000, guid: 776f78afd0920bb429b51baf38096c1b, type: 2}
 --- !u!1 &4570337932125597868

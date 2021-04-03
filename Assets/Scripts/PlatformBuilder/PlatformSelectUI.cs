@@ -7,12 +7,9 @@ public class PlatformSelectUI : MonoBehaviour
 {
     [SerializeField] private ItemBuilder builder;
 
-    [SerializeField] private PlatformType platformLarge;
-    [SerializeField] private PlatformType platformMedium;
-    [SerializeField] private PlatformType platformSmall;
-    [SerializeField] private PlatformType spikyPlatfromLarge;
-    [SerializeField] private PlatformType spikyPlatformMedium;
-    [SerializeField] private PlatformType spikyPlatformSmall;
+    [SerializeField] private List<PlatformType> platforms;
+    [SerializeField] private List<Button> buttons;
+    
 
     //Code for displaying the visual ghost of the platform.
     public Transform Ghost; //The ghost object.
@@ -20,52 +17,12 @@ public class PlatformSelectUI : MonoBehaviour
     public static bool GhostActive = false; //boolean to check if a visual ghost is active.
 
     void Awake() {
-        //Not sure how to loop this.
-        //Finds all the buttons and assigns them to a variable.
-        Transform PlatformLargeButton = transform.Find("PlatformLargeButton");
-        Transform PlatformMediumButton = transform.Find("PlatformMediumButton");
-        Transform PlatformSmallButton = transform.Find("PlatformSmallButton");
-        Transform SpikyPlatformLargeButton = transform.Find("SpikyPlatformLargeButton");
-        Transform SpikyPlatformMediumButton = transform.Find("SpikyPlatformMediumButton");
-        Transform SpikyPlatformSmallButton = transform.Find("SpikyPlatformSmallButton");
-
-        //Sets what the buttons do when they are clicked on.
-        //When a button is clicked, sets the selected platform to be of the type specified by the button.
-        PlatformLargeButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformLarge);
-            createGhost();
-        });
-
-        PlatformMediumButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformMedium);
-            createGhost();
-        });
-
-        PlatformSmallButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(platformSmall);
-            createGhost();
-        });
-
-        SpikyPlatformLargeButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatfromLarge);
-            createGhost();
-        });
-
-        SpikyPlatformMediumButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatformMedium);
-            createGhost();
-        });
-
-        SpikyPlatformSmallButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            builder.setSelectedPlatformType(spikyPlatformSmall);
-            createGhost();
-        });
+        for (int i = 0; i < platforms.Count; i++) {
+            if (i < buttons.Count) {
+																buttons[i].onClick.AddListener(() => { builder.setSelectedPlatformType(platforms[i]); });
+                createGhost();
+												}
+        }
 
     }
 
