@@ -3,43 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlatformSelectUI : MonoBehaviour
-{
+public class PlatformSelectUI : MonoBehaviour{
     [SerializeField] private ItemBuilder builder;
-
-    [SerializeField] private List<PlatformType> platforms;
-    [SerializeField] private List<Button> buttons;
-    [SerializeField] private List<int> quantity;
-    private List<int> used=new List<int>();
+    
 
     //Code for displaying the visual ghost of the platform.
     public Transform Ghost; //The ghost object.
     public Material GhostMaterial; //Material of the ghost sprite, should be transparent.
     public static bool GhostActive = false; //boolean to check if a visual ghost is active.
 
-    void Awake() {
-        
-        for (int i = 0; i < platforms.Count; i++) {
-            if (i < buttons.Count&&i<quantity.Count) {
-                used.Add(0);
-               
-																buttons[i].onClick.AddListener(() => {
-                    if (used[i]<quantity[i]){
-                        builder.setSelectedPlatformType(platforms[i]);
-                        createGhost();
-                        used[i] += 1;
-                    }
-                });
-                
-            }
-        }
-
-    }
-
     /**
      * Creates the visual ghost that allows the player to see where the platform will be built.
      */
-    private void createGhost() {
+    public void createGhost(PlatformType type) {
+        builder.setSelectedPlatformType(type);
         //If a ghost object has already spawned, destroy the object.
         if (GhostActive)
         {
