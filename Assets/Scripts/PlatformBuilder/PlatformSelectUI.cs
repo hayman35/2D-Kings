@@ -9,7 +9,8 @@ public class PlatformSelectUI : MonoBehaviour
 
     [SerializeField] private List<PlatformType> platforms;
     [SerializeField] private List<Button> buttons;
-    
+    [SerializeField] private List<int> quantity;
+    private List<int> used=new List<int>();
 
     //Code for displaying the visual ghost of the platform.
     public Transform Ghost; //The ghost object.
@@ -17,11 +18,21 @@ public class PlatformSelectUI : MonoBehaviour
     public static bool GhostActive = false; //boolean to check if a visual ghost is active.
 
     void Awake() {
+        
         for (int i = 0; i < platforms.Count; i++) {
             if (i < buttons.Count) {
-																buttons[i].onClick.AddListener(() => { builder.setSelectedPlatformType(platforms[i]); });
-                createGhost();
-												}
+                used.Add(0);
+               
+																buttons[i].onClick.AddListener(() => {
+                    
+                    if (used[i]< quantity[i]){
+                            builder.setSelectedPlatformType(platforms[i]);
+                            used[i] += 1;
+                            
+                        }
+                    });
+                    createGhost();
+            }
         }
 
     }

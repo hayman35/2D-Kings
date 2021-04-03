@@ -2808,6 +2808,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
   buttons:
   - {fileID: 4570337930225528766}
+  quantity: 03000000
   Ghost: {fileID: 0}
   GhostMaterial: {fileID: 2100000, guid: 776f78afd0920bb429b51baf38096c1b, type: 2}
 --- !u!1 &4570337932125597868
