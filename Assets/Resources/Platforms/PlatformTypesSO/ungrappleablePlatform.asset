@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f882c634779975e41bdccc6a5e582aa6, type: 3}
   m_Name: ungrappleablePlatform
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 0}
+  platformPrefab: {fileID: 6435670128901522066, guid: 668034564ef13224d80f2f2cad06d696,
+    type: 3}
   GUIGhost: {fileID: 0}
