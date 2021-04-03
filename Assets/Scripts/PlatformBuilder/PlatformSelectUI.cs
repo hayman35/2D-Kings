@@ -20,18 +20,17 @@ public class PlatformSelectUI : MonoBehaviour
     void Awake() {
         
         for (int i = 0; i < platforms.Count; i++) {
-            if (i < buttons.Count) {
+            if (i < buttons.Count&&i<quantity.Count) {
                 used.Add(0);
                
 																buttons[i].onClick.AddListener(() => {
-                    
-                    if (used[i]< quantity[i]){
-                            builder.setSelectedPlatformType(platforms[i]);
-                            used[i] += 1;
-                            
-                        }
-                    });
-                    createGhost();
+                    if (used[i]<quantity[i]){
+                        builder.setSelectedPlatformType(platforms[i]);
+                        createGhost();
+                        used[i] += 1;
+                    }
+                });
+                
             }
         }
 
