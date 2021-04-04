@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 public class obstacle : MonoBehaviour{
 				[SerializeField] private GameObject start;
 				[SerializeField] private ItemBuilder builder;
