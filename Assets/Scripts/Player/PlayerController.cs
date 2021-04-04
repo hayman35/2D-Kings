@@ -13,6 +13,7 @@ namespace Player.Movement
         [SerializeField] private float hangTime = .2f;
         [SerializeField] private float jumpBufferLength = .1f;
         [SerializeField] private Transform startPosition;
+        [SerializeField] private ItemBuilder builder;
 
         private Rigidbody2D rigidbody;
         private Collider2D collider;
@@ -91,6 +92,7 @@ namespace Player.Movement
         {
             if (other.gameObject.CompareTag("Death"))
             {
+                builder.resetPlatforms();
                 this.transform.position = startPosition.transform.position;
             }
             if (other.gameObject.CompareTag("MovingPlatform"))
