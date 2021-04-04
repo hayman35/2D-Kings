@@ -31,7 +31,7 @@ public class Gun2 : MonoBehaviour
 
         lookDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position; 
 
-        if (Mouse.current.leftButton.wasPressedThisFrame && checker == true)
+        if (Mouse.current.rightButton.wasPressedThisFrame && checker == true)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, distance, ropeLayerMask);
 
@@ -41,7 +41,7 @@ public class Gun2 : MonoBehaviour
                 SetRope(hit);
             }
         }
-        else if (Mouse.current.leftButton.wasPressedThisFrame && checker == false)
+        else if (Mouse.current.rightButton.wasReleasedThisFrame && checker == false)
         {
             checker = true;
             DestroyRope();
