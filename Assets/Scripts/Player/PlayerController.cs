@@ -88,37 +88,21 @@ namespace Player.Movement
 
         }
 
+        private void OnTriggerEnter2D(Collider2D other) 
+        {
+            if(other.gameObject.CompareTag("Button"))
+            {
+                print("HI");
+            }
+        }
         void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("Death"))
             {
                 builder.resetPlatforms();
                 this.transform.position = startPosition.transform.position;
-            }
-            if (other.gameObject.CompareTag("MovingPlatform"))
-            {
-                //this.transform.parent = other.transform;
-            }
-            if (other.gameObject.CompareTag("FallingPlatform"))
-            {
-                //other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                //this.transform.parent = other.transform;
-            }
-            
+            } 
         }
-        void OnCollisionExit2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("MovingPlatform"))
-            {
-                //this.transform.parent = null;
-            }
-            if (other.gameObject.CompareTag("FallingPlatform"))
-            {
-                //other.gameObject.GetComponent<Rigidbody2D>.isKinematic = true;
-                //this.transform.parent = null;
-            }
-        }
-
     }
 
 
