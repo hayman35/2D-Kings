@@ -906,7 +906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!231 &1056691735
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1142,6 +1142,7 @@ MonoBehaviour:
   groundPointRight: {fileID: 1661494651}
   hangTime: 0.2
   jumpBufferLength: 0.1
+  player: {fileID: 0}
 --- !u!4 &1056691741
 Transform:
   m_ObjectHideFlags: 0
