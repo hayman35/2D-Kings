@@ -9,7 +9,7 @@ public class ItemBuilder : MonoBehaviour
     [SerializeField] PlatformType selectedPlatformType = null;
     //Serialize field for choosing grid size. CHANGE numbers here to adjust grid size.
     public static Vector3 gridSize = new Vector3(1f, 1f, 1f);
-
+    private List<GameObject> platforms=new List<GameObject>();
     // Update is called once per frame
     void Update()
     {
@@ -24,17 +24,24 @@ public class ItemBuilder : MonoBehaviour
                 if (canPlaceHere(selectedPlatformType, mousePosition))
                 {
                     //Place the platform at the mouse position.
-                    Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity);
+                    platforms.Add(Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity).gameObject);
                     selectedPlatformType = null;
+
                 }
             }
         }
     }
-
-    /**
+				public void resetPlatforms() {
+        print(platforms.Count);
+        for (int i = 0; i <platforms.Count;i++) {
+            
+            Destroy(platforms[i]);
+								}
+				}
+				/**
      * A method that sets the current selected platform to be of type "type".
      */
-    public void setSelectedPlatformType(PlatformType type) {
+				public void setSelectedPlatformType(PlatformType type) {
         selectedPlatformType = type;
     }
 
