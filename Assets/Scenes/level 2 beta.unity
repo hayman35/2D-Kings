@@ -676,6 +676,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: 24f8be287f20f8840b1d86c60320301f, type: 2}
   quantity: 5
   selector: {fileID: 1071948519}
+  text: {fileID: 0}
 --- !u!114 &278264420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,6 +1654,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
   quantity: 3
   selector: {fileID: 1071948519}
+  text: {fileID: 718302330}
 --- !u!114 &1437968458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,6 +1999,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: e16765ae3e5e48a429eae9ccaec9f279, type: 2}
   quantity: 2
   selector: {fileID: 1071948519}
+  text: {fileID: 0}
 --- !u!114 &1654267912
 MonoBehaviour:
   m_ObjectHideFlags: 0
