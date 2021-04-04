@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 1525204181}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundDistance: 0.1
   moveSpeed: 8
-  jumpForce: 5
+  jumpForce: 7
   whatisGround:
     serializedVersion: 2
     m_Bits: 256
@@ -125,7 +125,8 @@ MonoBehaviour:
   groundPointRight: {fileID: 5613403470805230428}
   hangTime: 0.2
   jumpBufferLength: 0.1
-  player: {fileID: 0}
+  startPosition: {fileID: 0}
+  builder: {fileID: 0}
 --- !u!212 &5613403470730786705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -193,7 +194,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 3
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -484,7 +485,7 @@ MonoBehaviour:
   ropeLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  distance: 90
+  distance: 20
   firePoint: {fileID: 1175976309}
 --- !u!1 &5613403470805230431
 GameObject:
