@@ -61,11 +61,14 @@ public class PlayerController : MonoBehaviour {
 								if (hangCounter > 0f && jumpBufferCount >= 0) {
 												rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
 												jumpBufferCount = 0;
+												SoundManager.PlaySound(SoundManager.Sound.Player_Jump);
 								}
 
 								// Short jumps if the player does not hold the jump button (Mapped to W for now)
 								if (Keyboard.current.wKey.wasReleasedThisFrame && rigidbody.velocity.y > 0f) {
 												rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y * .5f);
+												SoundManager.PlaySound(SoundManager.Sound.Player_Jump);
+
 								}
 								if (Keyboard.current.escapeKey.wasReleasedThisFrame) {
 												pause();
