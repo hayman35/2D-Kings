@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-namespace Player.Movement
-{
-
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float groundDistance = .1f;
@@ -95,4 +92,5 @@ namespace Player.Movement
         }
     }
 }
+
 
