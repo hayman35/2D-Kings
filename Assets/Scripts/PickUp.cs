@@ -15,9 +15,8 @@ public class PickUp : MonoBehaviour
         if (other.gameObject.CompareTag("Stars"))
         {
             numberOfStarsCollected += 1;
+            starsText.text = numberOfStarsCollected.ToString();
             Destroy(other.gameObject);
         }
     }
-    
-
 }
