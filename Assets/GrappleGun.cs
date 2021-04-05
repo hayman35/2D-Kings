@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Gun2 : MonoBehaviour
+public class GrappleGun : MonoBehaviour
 {
     public LayerMask ropeLayerMask;
 
     public float distance = 90.0f;
 
     public Transform firePoint;
-
-    [HideInInspector] public Vector2 grapplePoint;
 
     LineRenderer line;
     DistanceJoint2D rope;
@@ -59,8 +59,6 @@ public class Gun2 : MonoBehaviour
 
         line.enabled = true;
         line.SetPosition(1, hit.point);
-
-        grapplePoint = hit.point;
     }
 
     void DestroyRope()

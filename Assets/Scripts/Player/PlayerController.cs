@@ -92,6 +92,7 @@ namespace Player.Movement
         {
             if (other.gameObject.CompareTag("Death"))
             {
+                if (builder == null) return;
                 builder.resetPlatforms();
                 this.transform.position = startPosition.transform.position;
             }
