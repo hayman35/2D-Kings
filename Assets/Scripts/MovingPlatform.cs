@@ -25,7 +25,6 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Console.Write("hit");
             other.gameObject.transform.parent = this.transform;
         }
 
