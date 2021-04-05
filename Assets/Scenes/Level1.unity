@@ -569,6 +569,7 @@ MonoBehaviour:
   hangTime: 0.2
   jumpBufferLength: 0.1
   currentScene: 0
+  pauseMenu: {fileID: 0}
 --- !u!1 &227059434
 GameObject:
   m_ObjectHideFlags: 0
