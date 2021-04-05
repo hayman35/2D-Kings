@@ -93,5 +93,6 @@ namespace Player.Movement
                 SceneManager.LoadScene(currentScene);
             }  
         }
+    }
 }
 
