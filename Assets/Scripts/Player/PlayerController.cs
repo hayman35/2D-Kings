@@ -12,7 +12,6 @@ namespace Player.Movement
         [SerializeField] private Transform groundPointLeft, groundPointRight;
         [SerializeField] private float hangTime = .2f;
         [SerializeField] private float jumpBufferLength = .1f;
-        [SerializeField] private Transform startPosition;
         [SerializeField] private int currentScene;
 
         private Rigidbody2D rigidbody;
@@ -79,7 +78,6 @@ namespace Player.Movement
             }
         }
 
-
         // Only gets called when the input changes 
         public void Move(InputAction.CallbackContext context)
         {
@@ -88,38 +86,12 @@ namespace Player.Movement
 
         }
 
-        void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other) 
         {
             if (other.gameObject.CompareTag("Death"))
             {
                 SceneManager.LoadScene(currentScene);
-            }
-            if (other.gameObject.CompareTag("MovingPlatform"))
-            {
-                //this.transform.parent = other.transform;
-            }
-            if (other.gameObject.CompareTag("FallingPlatform"))
-            {
-                //other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                //this.transform.parent = other.transform;
-            }
-            
+            }  
         }
-        void OnCollisionExit2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("MovingPlatform"))
-            {
-                //this.transform.parent = null;
-            }
-            if (other.gameObject.CompareTag("FallingPlatform"))
-            {
-                //other.gameObject.GetComponent<Rigidbody2D>.isKinematic = true;
-                //this.transform.parent = null;
-            }
-        }
-
-    }
-
-
 }
 
