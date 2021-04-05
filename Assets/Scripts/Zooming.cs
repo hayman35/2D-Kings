@@ -10,6 +10,7 @@ public class Zooming : MonoBehaviour
     private void Start() 
     {
         camera =  GetComponentInChildren<CinemachineVirtualCamera>();
+        camera.m_Lens.OrthographicSize = 10;
     }
 
     private void Update() 
