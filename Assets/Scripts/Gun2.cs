@@ -9,21 +9,19 @@ public class Gun2 : MonoBehaviour
 
     public Transform firePoint;
 
-    [HideInInspector] public Vector2 grapplePoint;
-
     LineRenderer line;
     DistanceJoint2D rope;
 
     Vector2 lookDirection;
 
-
-
     bool checker = true;
 
     void Start()
     {
+
         rope = GetComponentInParent<DistanceJoint2D>();
         line = GetComponentInChildren<LineRenderer>();
+
 
         rope.enabled = false;
         line.enabled = false;
@@ -38,7 +36,7 @@ public class Gun2 : MonoBehaviour
         if (Mouse.current.rightButton.wasPressedThisFrame && checker == true)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, distance, ropeLayerMask);
-            
+
             if (hit.collider != null)
             {
                 checker = false;
@@ -60,7 +58,6 @@ public class Gun2 : MonoBehaviour
         line.enabled = true;
         line.SetPosition(1, hit.point);
 
-        grapplePoint = hit.point;
     }
 
     void DestroyRope()
