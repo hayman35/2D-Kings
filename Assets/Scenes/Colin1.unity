@@ -253,30 +253,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1525204181, guid: 043fdd77236e82447a008c28cba07f69, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613403470730786704, guid: 043fdd77236e82447a008c28cba07f69,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
-        type: 3}
-      propertyPath: builder
-      value: 
-      objectReference: {fileID: 242435436}
-    - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
-        type: 3}
-      propertyPath: jumpForce
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
-        type: 3}
-      propertyPath: startPosition
-      value: 
-      objectReference: {fileID: 1061295455}
     - target: {fileID: 5613403470730786711, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: m_RootOrder
@@ -335,11 +311,6 @@ PrefabInstance:
     - target: {fileID: 5613403470730786732, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613403470730786732, guid: 043fdd77236e82447a008c28cba07f69,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3401,7 +3372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0.048822034, y: 1}
-  m_AnchoredPosition: {x: 29.999992, y: -24.799988}
+  m_AnchoredPosition: {x: 30, y: -24.799988}
   m_SizeDelta: {x: 32.80652, y: 25.41275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134342189
@@ -3776,6 +3747,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 313539188}
+    - target: {fileID: 107143382494193149, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2734517080319307859, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
       propertyPath: m_RootOrder

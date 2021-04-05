@@ -3156,6 +3156,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 421014831}
+    - target: {fileID: 107143382095912135, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 107143382494192898, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
       propertyPath: m_LocalPosition.x

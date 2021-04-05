@@ -145,6 +145,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 185193589}
+    - target: {fileID: 107143382095912135, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 107143382494192898, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,6 +159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 107143382494193149, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2734517080319307859, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
@@ -620,8 +630,7 @@ MonoBehaviour:
   groundPointRight: {fileID: 1989293575}
   hangTime: 0.2
   jumpBufferLength: 0.1
-  startPosition: {fileID: 0}
-  builder: {fileID: 0}
+  currentScene: 0
 --- !u!1 &278264417
 GameObject:
   m_ObjectHideFlags: 0

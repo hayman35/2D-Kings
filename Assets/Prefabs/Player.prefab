@@ -125,8 +125,7 @@ MonoBehaviour:
   groundPointRight: {fileID: 5613403470805230428}
   hangTime: 0.2
   jumpBufferLength: 0.1
-  startPosition: {fileID: 0}
-  builder: {fileID: 0}
+  currentScene: 0
 --- !u!212 &5613403470730786705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -391,7 +390,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef619753e6ef7c745ae165205583ef39, type: 2}
+  - {fileID: 2100000, guid: 80d4a02dc4dc03748935e2152457604f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -485,7 +484,7 @@ MonoBehaviour:
   ropeLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  distance: 20
+  distance: 10
   firePoint: {fileID: 1175976309}
 --- !u!1 &5613403470805230431
 GameObject:
