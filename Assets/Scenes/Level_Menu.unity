@@ -274,246 +274,6 @@ MonoBehaviour:
     OnClick:
       m_PersistentCalls:
         m_Calls: []
-  - LevelText: 11
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 12
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 13
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 14
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
-  - LevelText: 15
-    Unlock: 0
-    isInteractible: 0
-    OnClick:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &914189002
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,60 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  clearColorMode: 1
-  backgroundColorHDR:
-    r: 0.21698111
-    g: 0.21698111
-    b: 0.21698111
-    a: 0
-  clearDepth: 1
-  renderingPath: 0
-  volumeLayerMask:
-    m_Bits: 4294967295
-  volumeAnchorOverride: {fileID: 0}
-  aperture: 8
-  shutterSpeed: 0.005
-  iso: 400
-  m_FrameSettings:
-    overrides: 0
-    enableShadow: 1
-    enableContactShadows: 1
-    enableShadowMask: 1
-    enableSSR: 0
-    enableSSAO: 1
-    enableSubsurfaceScattering: 1
-    enableTransmission: 1
-    enableAtmosphericScattering: 1
-    enableVolumetrics: 1
-    enableReprojectionForVolumetrics: 1
-    enableLightLayers: 1
-    diffuseGlobalDimmer: 1
-    specularGlobalDimmer: 1
-    shaderLitMode: 1
-    enableDepthPrepassWithDeferredRendering: 0
-    enableTransparentPrepass: 1
-    enableMotionVectors: 1
-    enableObjectMotionVectors: 1
-    enableDecals: 1
-    enableRoughRefraction: 1
-    enableTransparentPostpass: 1
-    enableDistortion: 1
-    enablePostprocess: 1
-    enableAsyncCompute: 1
-    enableOpaqueObjects: 1
-    enableTransparentObjects: 1
-    enableRealtimePlanarReflection: 1
-    enableMSAA: 0
-    lightLoopSettings:
-      overrides: 0
-      enableTileAndCluster: 1
-      enableComputeLightEvaluation: 1
-      enableComputeLightVariants: 1
-      enableComputeMaterialVariants: 1
-      enableFptlForForwardOpaque: 1
-      enableBigTilePrepass: 1
-      isFptlEnabled: 1
 --- !u!1 &1023479182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,16 +748,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1992508954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1992508956
 MonoBehaviour:
   m_ObjectHideFlags: 0
