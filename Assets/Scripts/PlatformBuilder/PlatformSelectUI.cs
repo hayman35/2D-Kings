@@ -23,7 +23,7 @@ public class PlatformSelectUI : MonoBehaviour{
             Destroy(Ghost);
         }
         //Instantiate the ghost object at the mouse location
-        Ghost = Instantiate(builder.getSelectedPlatformType().GUIGhost, Vector3.zero, Quaternion.identity);
+        Ghost = Instantiate(type.GUIGhost, Vector3.zero, Quaternion.identity);
         //Adds the PlatformGhost script to the ghost object.
         Ghost.gameObject.AddComponent<PlatformGhost>();
         //Disable the box collider so that the player can place the platform, without colliding with it.

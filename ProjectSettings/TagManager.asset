@@ -11,6 +11,7 @@ TagManager:
   - Button
   - Stars
   - PostProcess
+  - LevelButton
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Player
   - Rope
   - PostProcessing
-  - 
+  - Coins
   - 
   - 
   - 
