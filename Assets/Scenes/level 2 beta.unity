@@ -145,6 +145,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 185193589}
+    - target: {fileID: 107143382095912135, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 107143382494192898, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,6 +159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 107143382494193149, guid: 948bb735ccb64d845a6a4db4be48eab5,
+        type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2734517080319307859, guid: 948bb735ccb64d845a6a4db4be48eab5,
         type: 3}
@@ -620,7 +630,7 @@ MonoBehaviour:
   groundPointRight: {fileID: 1989293575}
   hangTime: 0.2
   jumpBufferLength: 0.1
-  player: {fileID: 0}
+  currentScene: 0
 --- !u!1 &278264417
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +686,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: 24f8be287f20f8840b1d86c60320301f, type: 2}
   quantity: 5
   selector: {fileID: 1071948519}
-  text: {fileID: 0}
+  textfield: {fileID: 0}
 --- !u!114 &278264420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,6 +1317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 1173948474}
+  builder: {fileID: 0}
 --- !u!19719996 &1124132850
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -1654,7 +1665,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
   quantity: 3
   selector: {fileID: 1071948519}
-  text: {fileID: 718302330}
+  textfield: {fileID: 0}
 --- !u!114 &1437968458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +2010,7 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: e16765ae3e5e48a429eae9ccaec9f279, type: 2}
   quantity: 2
   selector: {fileID: 1071948519}
-  text: {fileID: 0}
+  textfield: {fileID: 0}
 --- !u!114 &1654267912
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,10 @@ TagManager:
   - MovingPlatform
   - FallingPlatform
   - Death
+  - Button
+  - Stars
+  - PostProcess
+  - LevelButton
   layers:
   - Default
   - TransparentFX
@@ -20,8 +24,8 @@ TagManager:
   - Ground
   - Player
   - Rope
-  - 
-  - 
+  - PostProcessing
+  - Coins
   - 
   - 
   - 
