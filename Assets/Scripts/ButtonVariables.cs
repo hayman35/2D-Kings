@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ButtonVariables : MonoBehaviour{
     [SerializeField]private PlatformType type;
     [SerializeField]private int quantity;
     [SerializeField]private PlatformSelectUI selector;
 
+	[SerializeField]private Text textfield;
 
-	public Text textfield;
+
 
 
     private int used=0;
@@ -19,7 +21,6 @@ public class ButtonVariables : MonoBehaviour{
 		textfield.text = "Remaining: " + quantity.ToString();
 	}
 
-    
 	public void OnButtonPress() {
         if (used < quantity) {
             used++;

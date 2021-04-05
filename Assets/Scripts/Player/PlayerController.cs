@@ -86,16 +86,12 @@ namespace Player.Movement
 
         }
 
-        void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other) 
         {
             if (other.gameObject.CompareTag("Death"))
             {
                 SceneManager.LoadScene(currentScene);
             }  
         }
-      
-    }
-
-
 }
 
