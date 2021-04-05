@@ -8,8 +8,6 @@ TagManager:
   - MovingPlatform
   - FallingPlatform
   - Death
-  - Button
-  - Stars
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+
 namespace Player.Movement
 {
 
@@ -12,7 +12,8 @@ namespace Player.Movement
         [SerializeField] private Transform groundPointLeft, groundPointRight;
         [SerializeField] private float hangTime = .2f;
         [SerializeField] private float jumpBufferLength = .1f;
-        [SerializeField] private int currentScene;
+        [SerializeField] private Transform startPosition;
+        [SerializeField] private ItemBuilder builder;
 
         private Rigidbody2D rigidbody;
         private Collider2D collider;
@@ -78,6 +79,7 @@ namespace Player.Movement
             }
         }
 
+
         // Only gets called when the input changes 
         public void Move(InputAction.CallbackContext context)
         {
@@ -86,12 +88,40 @@ namespace Player.Movement
 
         }
 
-        private void OnTriggerEnter2D(Collider2D other) 
+        void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("Death"))
             {
-                SceneManager.LoadScene(currentScene);
-            }  
+                if (builder == null) return;
+                builder.resetPlatforms();
+                this.transform.position = startPosition.transform.position;
+            }
+            if (other.gameObject.CompareTag("MovingPlatform"))
+            {
+                //this.transform.parent = other.transform;
+            }
+            if (other.gameObject.CompareTag("FallingPlatform"))
+            {
+                //other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                //this.transform.parent = other.transform;
+            }
+            
         }
+        void OnCollisionExit2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("MovingPlatform"))
+            {
+                //this.transform.parent = null;
+            }
+            if (other.gameObject.CompareTag("FallingPlatform"))
+            {
+                //other.gameObject.GetComponent<Rigidbody2D>.isKinematic = true;
+                //this.transform.parent = null;
+            }
+        }
+
+    }
+
+
 }
 
