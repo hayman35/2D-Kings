@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GrappleGun : MonoBehaviour
+public class Gun2 : MonoBehaviour
 {
     public LayerMask ropeLayerMask;
 
@@ -16,14 +14,12 @@ public class GrappleGun : MonoBehaviour
 
     Vector2 lookDirection;
 
-
-
     bool checker = true;
 
     void Start()
     {
-        rope = GetComponentInParent<DistanceJoint2D>();
-        line = GetComponentInChildren<LineRenderer>();
+        rope = gameObject.AddComponent<DistanceJoint2D>();
+        line = GetComponent<LineRenderer>();
 
         rope.enabled = false;
         line.enabled = false;
@@ -38,7 +34,7 @@ public class GrappleGun : MonoBehaviour
         if (Mouse.current.rightButton.wasPressedThisFrame && checker == true)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, distance, ropeLayerMask);
-            
+
             if (hit.collider != null)
             {
                 checker = false;
