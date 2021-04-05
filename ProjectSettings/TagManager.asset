@@ -7,6 +7,7 @@ TagManager:
   - PlatformSpriteLarge
   - MovingPlatform
   - FallingPlatform
+  - Death
   layers:
   - Default
   - TransparentFX

@@ -12,20 +12,20 @@ namespace Player.Movement
         [SerializeField] private Transform groundPointLeft, groundPointRight;
         [SerializeField] private float hangTime = .2f;
         [SerializeField] private float jumpBufferLength = .1f;
+        [SerializeField] private Transform startPosition;
+        [SerializeField] private ItemBuilder builder;
 
         private Rigidbody2D rigidbody;
         private Collider2D collider;
-        //private Animator animator;
+        private Animator animator;
         private bool isGrounded;
         private float inputX, inputY, hangCounter, jumpBufferCount;
-
-        public GameObject player;
 
         private void Awake() 
         {
             rigidbody = GetComponent<Rigidbody2D>();
             collider = GetComponent<Collider2D>();
-           // animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
         }
 
         private void Update() 
@@ -62,8 +62,8 @@ namespace Player.Movement
             }
 
 
-            //animator.SetFloat("speed", Mathf.Abs(rigidbody.velocity.x));
-            //animator.SetBool("isGrounded", isGrounded);
+            animator.SetFloat("speed", Mathf.Abs(rigidbody.velocity.x));
+            animator.SetBool("isGrounded", isGrounded);
 
             // For the jumping 
             if(hangCounter > 0f && jumpBufferCount >= 0)
@@ -90,14 +90,19 @@ namespace Player.Movement
 
         void OnCollisionEnter2D(Collision2D other)
         {
+            if (other.gameObject.CompareTag("Death"))
+            {
+                builder.resetPlatforms();
+                this.transform.position = startPosition.transform.position;
+            }
             if (other.gameObject.CompareTag("MovingPlatform"))
             {
-                this.transform.parent = other.transform;
+                //this.transform.parent = other.transform;
             }
             if (other.gameObject.CompareTag("FallingPlatform"))
             {
-                other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                this.transform.parent = other.transform;
+                //other.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                //this.transform.parent = other.transform;
             }
             
         }
@@ -105,12 +110,12 @@ namespace Player.Movement
         {
             if (other.gameObject.CompareTag("MovingPlatform"))
             {
-                this.transform.parent = null;
+                //this.transform.parent = null;
             }
             if (other.gameObject.CompareTag("FallingPlatform"))
             {
                 //other.gameObject.GetComponent<Rigidbody2D>.isKinematic = true;
-                this.transform.parent = null;
+                //this.transform.parent = null;
             }
         }
 
