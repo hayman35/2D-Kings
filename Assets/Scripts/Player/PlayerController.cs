@@ -99,8 +99,9 @@ public class PlayerController : MonoBehaviour {
 
 				private void OnTriggerEnter2D(Collider2D other) {
 								if (other.gameObject.CompareTag("Death")) {
-												SceneManager.LoadScene(currentScene);
+												SceneManager.LoadScene(SceneManager.GetActiveScene().path);
 												SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Player_Death);
+
 								}
 				}
 }
