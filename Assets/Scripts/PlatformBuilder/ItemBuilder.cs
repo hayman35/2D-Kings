@@ -36,8 +36,14 @@ public class ItemBuilder : MonoBehaviour
                         platformCountText.text = platformCount.ToString();
                     }
                     selectedPlatformType = null;
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Selection);
                 }
-                selectedPlatformType = null;
+                else
+                {
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Error);
+
+                }
+
             }
         }
     }

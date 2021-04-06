@@ -51,7 +51,9 @@ public class Gun2 : MonoBehaviour
     void SetRope(RaycastHit2D hit)
     {
         rope.enabled = true;
+        rope.enableCollision = true;
         rope.connectedAnchor = hit.point;
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Player_Grapple);
 
         line.enabled = true;
         line.SetPosition(1, hit.point);
