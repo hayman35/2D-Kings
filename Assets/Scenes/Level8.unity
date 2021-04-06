@@ -250,6 +250,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123660062183528144}
     m_Modifications:
+    - target: {fileID: 1113324687169281609, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.800049
+      objectReference: {fileID: 0}
     - target: {fileID: 1113324687169281610, guid: d44796d5ec96c344d8fb26cfcc0910bc,
         type: 3}
       propertyPath: quantity
@@ -320,6 +325,11 @@ PrefabInstance:
       propertyPath: builder
       value: 
       objectReference: {fileID: 1123660062288803457}
+    - target: {fileID: 8866327901600465131, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 652309063}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44796d5ec96c344d8fb26cfcc0910bc, type: 3}
 --- !u!114 &246619860 stripped
@@ -334,6 +344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &246619861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866327901600465133, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 246619859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &409232791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -431,7 +447,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 936235051}
+      objectReference: {fileID: 246619861}
     - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: currentScene
@@ -797,12 +813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &936235051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5724996967265328098, guid: aa9a1bfaa11e49f47b1ecff963b20351,
-    type: 3}
-  m_PrefabInstance: {fileID: 3761011382893886889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &936235052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5724996967265328101, guid: aa9a1bfaa11e49f47b1ecff963b20351,

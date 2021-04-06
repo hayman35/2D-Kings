@@ -2533,6 +2533,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 980879674}
     m_Modifications:
+    - target: {fileID: 1113324687169281609, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.800049
+      objectReference: {fileID: 0}
     - target: {fileID: 1113324687169281610, guid: d44796d5ec96c344d8fb26cfcc0910bc,
         type: 3}
       propertyPath: quantity
@@ -2603,6 +2608,11 @@ PrefabInstance:
       propertyPath: builder
       value: 
       objectReference: {fileID: 1004725602}
+    - target: {fileID: 8866327901600465131, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1882979345}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44796d5ec96c344d8fb26cfcc0910bc, type: 3}
 --- !u!4 &871925293 stripped
@@ -2635,6 +2645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &871925296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866327901600465133, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 871925292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &881151383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11714,7 +11730,7 @@ MonoBehaviour:
   hangTime: 0.2
   jumpBufferLength: 0.1
   currentScene: 0
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 871925296}
 --- !u!4 &1882979346
 Transform:
   m_ObjectHideFlags: 0
