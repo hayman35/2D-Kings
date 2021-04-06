@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f882c634779975e41bdccc6a5e582aa6, type: 3}
   m_Name: CumblingPlatform
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 3395293279946774148, guid: 8aa65960d0c91e8439b93b82b07e1c81,
+  platformPrefab: {fileID: 3395293279946774148, guid: bd337f5edd6d7a2488086c799f207bdb,
     type: 3}
   GUIGhost: {fileID: 3395293279946774148, guid: 8aa65960d0c91e8439b93b82b07e1c81,
     type: 3}
