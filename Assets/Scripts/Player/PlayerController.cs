@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour {
 				[SerializeField] private Transform groundPointLeft, groundPointRight;
 				[SerializeField] private float hangTime = .2f;
 				[SerializeField] private float jumpBufferLength = .1f;
-				[SerializeField] private int currentScene;
 				[SerializeField] private GameObject pauseMenu;
 				private bool showPause=false;
 
