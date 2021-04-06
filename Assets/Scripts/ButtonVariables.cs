@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class ButtonVariables : MonoBehaviour{
     [SerializeField]private PlatformType type;
     [SerializeField]private int quantity;
     [SerializeField]private PlatformSelectUI selector;
-    private Button button;
+    [SerializeField] private EventSystem eventSystem;
 
+    private Button button;
     private void Awake() 
     {
         button = GetComponent<Button>();
@@ -22,14 +24,12 @@ public class ButtonVariables : MonoBehaviour{
         {
             FadeToColor(button.colors.pressedColor);
             button.onClick.Invoke(); 
-            if (Keyboard.current.eKey.isPressed)
-            {
-                button.onClick.RemoveAllListeners();
-            }
+            
         }
         else if(Keyboard.current.eKey.wasReleasedThisFrame)
         {
             FadeToColor(button.colors.normalColor);
+             selector.DestoryGhost();
         }
     }
 

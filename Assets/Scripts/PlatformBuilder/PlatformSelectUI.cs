@@ -20,7 +20,10 @@ public class PlatformSelectUI : MonoBehaviour{
         //If a ghost object has already spawned, destroy the object.
         if (GhostActive)
         {
-            Destroy(Ghost);
+            if (Ghost != null)
+        {
+            Destroy(Ghost.gameObject);
+        }
         }
         //Instantiate the ghost object at the mouse location
         Ghost = Instantiate(type.GUIGhost, Vector3.zero, Quaternion.identity);
@@ -35,5 +38,13 @@ public class PlatformSelectUI : MonoBehaviour{
         }
         //Set GhostActive to be true.
         GhostActive = true;
+    }
+
+    public void DestoryGhost()
+    {
+        if (Ghost != null)
+        {
+            Destroy(Ghost.gameObject);
+        }
     }
 }
