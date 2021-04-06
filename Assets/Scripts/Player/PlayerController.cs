@@ -15,12 +15,14 @@ public class PlayerController : MonoBehaviour {
 				private Rigidbody2D rigidbody;
 				private Collider2D collider;
 				private Animator animator;
-				private bool isGrounded;
+				private bool isGrounded, trigger;
 				private float inputX, inputY, hangCounter, jumpBufferCount;
+				
 
 				private void Awake() {
 								rigidbody = GetComponent<Rigidbody2D>();
 								collider = GetComponent<Collider2D>();
+								trigger = true;
 								animator = GetComponent<Animator>();
 				}
 
@@ -61,11 +63,16 @@ public class PlayerController : MonoBehaviour {
 								if (hangCounter > 0f && jumpBufferCount >= 0) {
 												rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
 												jumpBufferCount = 0;
+												if (isGrounded)
+												{
+													SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Player_Jump);
+												}
 								}
 
 								// Short jumps if the player does not hold the jump button (Mapped to W for now)
 								if (Keyboard.current.wKey.wasReleasedThisFrame && rigidbody.velocity.y > 0f) {
 												rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y * .5f);
+
 								}
 								if (Keyboard.current.escapeKey.wasReleasedThisFrame) {
 												pause();
@@ -92,7 +99,9 @@ public class PlayerController : MonoBehaviour {
 
 				private void OnTriggerEnter2D(Collider2D other) {
 								if (other.gameObject.CompareTag("Death")) {
-												SceneManager.LoadScene(currentScene);
+												SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+												SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Player_Death);
+
 								}
 				}
 }

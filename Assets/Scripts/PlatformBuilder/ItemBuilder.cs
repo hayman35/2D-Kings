@@ -3,41 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class ItemBuilder : MonoBehaviour
 {
     [SerializeField] PlatformType selectedPlatformType = null;
+    [SerializeField] public static int platformCount = 2;
+    [SerializeField] public TextMeshProUGUI platformCountText;
     //Serialize field for choosing grid size. CHANGE numbers here to adjust grid size.
     public static Vector3 gridSize = new Vector3(1f, 1f, 1f);
-    private List<GameObject> platforms=new List<GameObject>();
+    private List<GameObject> platforms = new List<GameObject>();
     // Update is called once per frame
-    void Update()
-    {
+
+    void Start() {
+        platformCount = 2;
+        platformCountText.text = platformCount.ToString();
+    }
+
+    void Update() {
         if (selectedPlatformType != null) {
             //If the left mouse button is pressed and the mouse cursor is not on top of a game obect.
-            if (Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject())
-            {
+            if (Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject()) {
                 Vector3 mousePosition = GetMouseWorldPosition();
                 //Snaps to grid, depends on grid size.
                 mousePosition = snapToGridSquare(mousePosition);
                 //If the current selected platform does not overlap with anything and can be placed.
-                if (canPlaceHere(selectedPlatformType, mousePosition))
-                {
-                    //Place the platform at the mouse position.
-                    platforms.Add(Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity).gameObject);
+                if (canPlaceHere(selectedPlatformType, mousePosition)) {
+                    if (platformCount != 0) {
+                        //Place the platform at the mouse position.
+                        platforms.Add(Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity).gameObject);
+                        platformCount--;
+                        platformCountText.text = platformCount.ToString();
+                    }
                     selectedPlatformType = null;
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Selection);
+                }
+                else
+                {
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Error);
 
                 }
+
             }
         }
     }
-				public void resetPlatforms() {
+
+
+    public void resetPlatforms() {
         print(platforms.Count);
         for (int i = 0; i <platforms.Count;i++) {
             
             Destroy(platforms[i]);
-								}
-				}
+		}
+	}
 				/**
      * A method that sets the current selected platform to be of type "type".
      */
