@@ -10,19 +10,21 @@ public class ButtonVariables : MonoBehaviour{
     [SerializeField]private PlatformType type;
     [SerializeField]private int quantity;
     [SerializeField]private PlatformSelectUI selector;
-    [SerializeField]public TextMeshProUGUI platformCount;
+    //[SerializeField]public TextMeshProUGUI platformCount;
 
-    private int used=0;
+    //private int used=0;
 
-	void Start(){
-        platformCount.text = quantity.ToString();
-    }
+    //void Start(){
+    //platformCount.text = quantity.ToString();
+    //}
 
-	public void OnButtonPress() {
-        if (used < quantity) {
-            used++;
-			int count = quantity - used;
-            platformCount.text = count.ToString();
+    public void OnButtonPress() {
+        //if (used < quantity) {
+        //used++;
+        //int count = quantity - used;
+        //platformCount.text = count.ToString();
+        quantity = ItemBuilder.platformCount;
+        if (quantity > 0) {
             selector.createGhost(type);
         }
     }
