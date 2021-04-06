@@ -3192,24 +3192,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 421941667}
     m_Modifications:
-    - target: {fileID: 1876759349, guid: 53382bbd72cf0bb4d943bcd298175dc2, type: 3}
-      propertyPath: unlock
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 430330790874954205, guid: 53382bbd72cf0bb4d943bcd298175dc2,
         type: 3}
       propertyPath: m_Name
       value: FinishFlag
       objectReference: {fileID: 0}
-    - target: {fileID: 430330790874954205, guid: 53382bbd72cf0bb4d943bcd298175dc2,
-        type: 3}
-      propertyPath: m_TagString
-      value: Finish
-      objectReference: {fileID: 0}
     - target: {fileID: 430330790874954207, guid: 53382bbd72cf0bb4d943bcd298175dc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 430330790874954207, guid: 53382bbd72cf0bb4d943bcd298175dc2,
         type: 3}

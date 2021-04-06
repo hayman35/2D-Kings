@@ -209,7 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fe3575c4a6af14499316ff21e34f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingScene: {fileID: 0}
   LEVELButton: {fileID: 1548974648783802, guid: 612a7892ffc95de46a7dcf759a88c0e4,
     type: 3}
   Spacer: {fileID: 1164695149}
@@ -286,7 +285,6 @@ GameObject:
   - component: {fileID: 914189007}
   - component: {fileID: 914189005}
   - component: {fileID: 914189004}
-  - component: {fileID: 914189009}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -367,18 +365,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 38.866, y: 98.53001, z: 13.443001}
---- !u!114 &914189009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914189002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1023479182
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +500,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.069
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -680,8 +666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 39.9}
-  m_SizeDelta: {x: 0, y: -79.8}
+  m_AnchoredPosition: {x: 0, y: 10.79}
+  m_SizeDelta: {x: 0, y: -21.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895187109
 MonoBehaviour:
@@ -703,7 +689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c4e0af11a3072949bbab252536d6761, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

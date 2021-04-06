@@ -24,13 +24,9 @@ public class GOAL : MonoBehaviour {
     {
         if (target.CompareTag("Player"))
         {
-            print("Hit");
             PlayerPrefs.SetInt("levelReached", unlock);
             level_complete.SetActive(true);
             SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Level_Finish);
-
-
-
         }
     }
 }

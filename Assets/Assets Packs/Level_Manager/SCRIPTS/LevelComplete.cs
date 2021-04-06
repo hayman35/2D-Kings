@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelComplete : MonoBehaviour {
 
     //public string Level= SceneManager.GetActiveScene().name;
-    int LevelAmount = 50;
+    int LevelAmount = 10;
     private int currentLevel;
 
     private void Start()

@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LEVEL_M_TEST : MonoBehaviour {
 
-    public GameObject LoadingScene;
-
-
     [System.Serializable]
     public class Level
     {
@@ -26,9 +23,10 @@ public class LEVEL_M_TEST : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        Delete();
+        //Delete();
         FillList();
 	}
+    
 	void FillList()
     {
         foreach(var level in LevelList)
@@ -78,8 +76,6 @@ public class LEVEL_M_TEST : MonoBehaviour {
     {
         SceneManager.LoadScene(value);
         //AsyncOperation operation = SceneManager.LoadSceneAsync(value);
-
-        LoadingScene.SetActive(true);
     }
     
 }
