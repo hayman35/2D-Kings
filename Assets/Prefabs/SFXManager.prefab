@@ -45,13 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Audio: {fileID: 27285987888421520}
+  background: {fileID: 0}
   Player_Jump: {fileID: 8300000, guid: 68b23a1cb4d424b80b66a6130f7bd1f5, type: 3}
   Player_Grapple: {fileID: 8300000, guid: 5bcd1f456e85948c98d9d60a96e6835c, type: 3}
   Player_Collect_Star: {fileID: 8300000, guid: 5a415b627a5de42b3beee643cd04647e, type: 3}
   Player_Death: {fileID: 8300000, guid: 491f99557a75441038c714eb8abbb9a3, type: 3}
-  World_1_Music: {fileID: 0}
-  World_2_Music: {fileID: 0}
-  World_3_Music: {fileID: 0}
+  World_Music: {fileID: 8300000, guid: b2c4904d5b3aa254c8ac6d5ba412d34c, type: 3}
   Error: {fileID: 8300000, guid: 53adc3546de4a4d9ba026df82a05590e, type: 3}
   Selection: {fileID: 8300000, guid: f6779cba3f5af4de9aa0e8399f983094, type: 3}
   Level_Finish: {fileID: 8300000, guid: 83da5183d88e24725b8c9cccb626d35e, type: 3}

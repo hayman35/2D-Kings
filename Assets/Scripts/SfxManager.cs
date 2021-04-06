@@ -5,15 +5,13 @@ using UnityEngine;
 public class SfxManager : MonoBehaviour
 {
     public static SfxManager sfxInstance;
-    public AudioSource Audio;
+    public AudioSource Audio, background;
 
     public AudioClip Player_Jump,
         Player_Grapple,
         Player_Collect_Star,
         Player_Death,
-        World_1_Music,
-        World_2_Music,
-        World_3_Music,
+        World_Music,
         Error,
         Selection,
         Level_Finish;
@@ -29,17 +27,9 @@ public class SfxManager : MonoBehaviour
         sfxInstance = this;
         DontDestroyOnLoad(this);
 
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (background != null)
+        {
+            background.Play();
+        }
     }
 }
