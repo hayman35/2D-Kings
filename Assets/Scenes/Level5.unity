@@ -2219,7 +2219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 969582970}
     - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: currentScene
@@ -2322,6 +2322,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starsText: {fileID: 969582968}
+--- !u!114 &907835261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
+    type: 3}
+  m_PrefabInstance: {fileID: 907835257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907835259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a6b73b1acaa1c4c856b30d732dfc0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &969582966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2399,6 +2411,11 @@ PrefabInstance:
       propertyPath: builder
       value: 
       objectReference: {fileID: 2210079123990077511}
+    - target: {fileID: 8866327901600465131, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 907835261}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44796d5ec96c344d8fb26cfcc0910bc, type: 3}
 --- !u!4 &969582967 stripped
@@ -2431,6 +2448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &969582970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866327901600465133, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 969582966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &971755627
 GameObject:
   m_ObjectHideFlags: 0
