@@ -16,6 +16,8 @@ public class PickUp : MonoBehaviour
         {
             numberOfStarsCollected += 1;
             starsText.text = numberOfStarsCollected.ToString();
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Player_Collect_Star);
+
             Destroy(other.gameObject);
         }
     }

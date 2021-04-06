@@ -26,7 +26,12 @@ public class ItemBuilder : MonoBehaviour
                     //Place the platform at the mouse position.
                     platforms.Add(Instantiate(selectedPlatformType.platformPrefab, mousePosition, Quaternion.identity).gameObject);
                     selectedPlatformType = null;
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Selection);
 
+                }
+                else
+                {
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Error);
                 }
             }
         }
