@@ -3,26 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-
+using UnityEngine.InputSystem;
 
 public class ButtonVariables : MonoBehaviour{
     [SerializeField]private PlatformType type;
     [SerializeField]private int quantity;
     [SerializeField]private PlatformSelectUI selector;
-    //[SerializeField]public TextMeshProUGUI platformCount;
+    private Button button;
 
-    //private int used=0;
+    private void Awake() 
+    {
+        button = GetComponent<Button>();
+    }
 
-    //void Start(){
-    //platformCount.text = quantity.ToString();
-    //}
+    private void Update() 
+    {
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            FadeToColor(button.colors.pressedColor);
+            button.onClick.Invoke(); 
+            if (Keyboard.current.eKey.isPressed)
+            {
+                button.onClick.RemoveAllListeners();
+            }
+        }
+        else if(Keyboard.current.eKey.wasReleasedThisFrame)
+        {
+            FadeToColor(button.colors.normalColor);
+        }
+    }
 
-    public void OnButtonPress() {
-        //if (used < quantity) {
-        //used++;
-        //int count = quantity - used;
-        //platformCount.text = count.ToString();
+    void FadeToColor(Color color)
+    {
+        Graphic graphic = GetComponent<Graphic>();
+        graphic.CrossFadeColor(color,button.colors.fadeDuration,true,true);
+    }
+
+    public void OnButtonPress() 
+    {
         quantity = ItemBuilder.platformCount;
         if (quantity > 0) {
             selector.createGhost(type);
