@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5421299553708724506, guid: 043fdd77236e82447a008c28cba07f69,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1504429655}
+    - target: {fileID: 5421299553708724517, guid: 043fdd77236e82447a008c28cba07f69,
+        type: 3}
+      propertyPath: starsText
+      value: 
+      objectReference: {fileID: 1914514038}
     - target: {fileID: 5613403470730786710, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: pauseMenu
@@ -3268,6 +3278,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1914514036}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1914514038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1113324689018403879, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914514036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1914514039 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1113324688849958247, guid: d44796d5ec96c344d8fb26cfcc0910bc,

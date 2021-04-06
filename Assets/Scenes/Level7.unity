@@ -2802,6 +2802,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5421299553708724506, guid: 043fdd77236e82447a008c28cba07f69,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1964161545}
     - target: {fileID: 5421299553708724517, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: starsText

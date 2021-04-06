@@ -345,6 +345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5421299553708724506, guid: 043fdd77236e82447a008c28cba07f69,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1897090895}
     - target: {fileID: 5421299553708724517, guid: 043fdd77236e82447a008c28cba07f69,
         type: 3}
       propertyPath: starsText
@@ -2794,6 +2799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1897090895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866327901600465133, guid: d44796d5ec96c344d8fb26cfcc0910bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897090891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2057704113
 GameObject:
   m_ObjectHideFlags: 0
