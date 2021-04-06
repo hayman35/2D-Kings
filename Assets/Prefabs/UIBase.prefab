@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 2b089ccb7440bc24a9b5592182fa4da4, type: 2}
-  quantity: 2
+  quantity: 3
   selector: {fileID: 1113324689269045407}
 --- !u!1 &1113324687784085354
 GameObject:
@@ -314,7 +314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 62.22, y: -12.899994}
+  m_AnchoredPosition: {x: 69.36, y: -12.899994}
   m_SizeDelta: {x: 17.09674, y: 15.626057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1113324688849958240

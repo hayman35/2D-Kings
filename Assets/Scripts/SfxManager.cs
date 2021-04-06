@@ -11,7 +11,6 @@ public class SfxManager : MonoBehaviour
         Player_Grapple,
         Player_Collect_Star,
         Player_Death,
-        World_Music,
         Error,
         Selection,
         Level_Finish;
@@ -26,10 +25,6 @@ public class SfxManager : MonoBehaviour
 
         sfxInstance = this;
         DontDestroyOnLoad(this);
-
-        if (background != null)
-        {
-            background.Play();
-        }
+        background.Play();
     }
 }
