@@ -182,8 +182,10 @@ MonoBehaviour:
 
     W - Jump
 
-    Left Click - Place
-    platform
+    E - Build Mode
+
+    Left
+    Click - Place Platform
 
     Right Click - Grapple
 
