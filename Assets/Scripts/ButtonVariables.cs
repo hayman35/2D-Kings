@@ -10,9 +10,9 @@ public class ButtonVariables : MonoBehaviour{
     [SerializeField]private PlatformType type;
     [SerializeField]private int quantity;
     [SerializeField]private PlatformSelectUI selector;
-    [SerializeField] private EventSystem eventSystem;
 
     private Button button;
+    bool hide = true;
     private void Awake() 
     {
         button = GetComponent<Button>();
@@ -29,7 +29,11 @@ public class ButtonVariables : MonoBehaviour{
         else if(Keyboard.current.eKey.wasReleasedThisFrame)
         {
             FadeToColor(button.colors.normalColor);
-             selector.DestoryGhost();
+            hide = !hide;
+            if (hide)
+            {
+                selector.DestoryGhost();
+            }
         }
     }
 
@@ -42,6 +46,7 @@ public class ButtonVariables : MonoBehaviour{
     public void OnButtonPress() 
     {
         quantity = ItemBuilder.platformCount;
+        
         if (quantity > 0) {
             selector.createGhost(type);
         }
