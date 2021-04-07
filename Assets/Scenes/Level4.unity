@@ -137,13 +137,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3395293279946774148, guid: bd337f5edd6d7a2488086c799f207bdb,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395293279946774148, guid: bd337f5edd6d7a2488086c799f207bdb,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.87
+      value: -9.67
       objectReference: {fileID: 0}
     - target: {fileID: 3395293279946774148, guid: bd337f5edd6d7a2488086c799f207bdb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 3395293279946774148, guid: bd337f5edd6d7a2488086c799f207bdb,
         type: 3}
@@ -189,6 +194,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: crumblingplatform v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571354204859458252, guid: bd337f5edd6d7a2488086c799f207bdb,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d8fd2f198fb14134cb72dba1b16c1399, type: 2}
+    - target: {fileID: 7571354204859458252, guid: bd337f5edd6d7a2488086c799f207bdb,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd337f5edd6d7a2488086c799f207bdb, type: 3}
@@ -3290,11 +3305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295130326, guid: d44796d5ec96c344d8fb26cfcc0910bc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.900024
+      value: 20.900146
       objectReference: {fileID: 0}
     - target: {fileID: 295130326, guid: d44796d5ec96c344d8fb26cfcc0910bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.3
+      value: -16.300049
       objectReference: {fileID: 0}
     - target: {fileID: 1113324687169281610, guid: d44796d5ec96c344d8fb26cfcc0910bc,
         type: 3}
